@@ -26,7 +26,7 @@ app.set('view engine', 'ejs');
 // encode url from body parser
 app.use(bodyParser.urlencoded({extended: true}));
 // use css sytle of the public directory
-app.use(express.static("public"));
+app.use('/static', express.static("public"));
 
 // display root page with values
 app.get("/", function(req, res) {
